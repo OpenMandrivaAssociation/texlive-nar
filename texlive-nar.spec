@@ -1,6 +1,6 @@
 Name:		texlive-nar
 Version:	38100
-Release:	1
+Release:	2
 Summary:	BibTeX style for Nucleic Acid Research
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/nar
