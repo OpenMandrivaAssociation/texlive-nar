@@ -3,7 +3,7 @@ Version:	38100
 Release:	2
 Summary:	BibTeX style for Nucleic Acid Research
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/nar
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/nar
 License:	other-free
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/nar.r%{version}.tar.xz
 BuildArch:	noarch
