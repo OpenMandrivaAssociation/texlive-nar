@@ -1,35 +1,20 @@
-Name:		texlive-nar
-Version:	38100
-Release:	2
+%global tl_name nar
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	3.19
+Release:	%{tl_revision}.1
 Summary:	BibTeX style for Nucleic Acid Research
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/nar
+URL:		https://www.ctan.org/tex-archive/biblio/bibtex/contrib/misc/nar.bst
 License:	other-free
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/nar.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/nar.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This BibTeX bibliography style is for the journal Nucleic Acid
-Research. It was adapted from the standard unsrt.bst style
-file.
+This BibTeX bibliography style is for the journal Nucleic Acid Research.
+It was adapted from the standard unsrt.bst style file.
 
-%prep
-%autosetup -p1 -c
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/bibtex/bst/nar
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
